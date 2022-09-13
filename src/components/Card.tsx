@@ -1,6 +1,6 @@
 import { IWeatherParams } from './types';
 import { FC } from "react";
-
+import Compass from './Compass';
 
 interface IProps {
   data: IWeatherParams;
@@ -17,6 +17,7 @@ const Card:FC<IProps>= (props: IProps) => {
       <p>{Math.round(props.data.main.temp)}℃</p>
       <p className="text-sm text-slate-400">feels {Math.round(props.data.main.feels_like)}℃</p>
       <p>{props.data.weather[0].description}</p>
+      <Compass wind={props.data.wind}/>
     </div>
   )
 }

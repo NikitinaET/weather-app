@@ -26,11 +26,6 @@ const CardWrapper = () => {
   return (
     <div className="bg-sky-100 ">
       <h1 className="font-black font-serif text-2xl mb-10">ПРОГНОЗ ПОГОДЫ НОВОРОССИЙСК</h1>
-      {/* <div className="flex flex-wrap">
-        {forecast?.list.map((card) => (
-          <Card key={card.dt} data={card} />
-        ))}
-      </div> */}
       {dateList.map(list => (
         <div className="flex flex-wrap mb-5 justify-around" key={list[0]?.dt_txt}>
           {list.map(card => (
@@ -38,7 +33,6 @@ const CardWrapper = () => {
           ))}
         </div>
       ))}
-      <div className=""></div>
     </div>
   );
 }
